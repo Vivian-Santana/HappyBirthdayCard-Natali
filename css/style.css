@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Caveat&family=Satisfy&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:150vh;
+    background-color: rgba(168, 167, 167, 0.6);
+  }
+  /*Criação do container do cartão*/
+  .birthdayCard {
+    position: relative;
+    width: 250px;
+    height:350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+  }
+  
+  .birthdayCard:hover {
+      transform: perspective(2500px) rotate(5deg);
+      box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+  }
+  
+  .birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg); 
+  }
+  
+  .birthdayCard:hover .front-text {
+    display: none;
+  }
+  
+  .birthdayCard:hover .wrap-decoTwo {
+    display: none;
+  }
+
+  /*Estilo da frente do cartão*/
+  .cardFront {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    height:350px;
+    overflow: hidden;
+    transform-origin: left;
+    transition: .4s;
+  }
+
+  .front-text h3{
+    justify-content:right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Carattere', cursive;
+    color: #fe02c4;
+    text-align: center;
+    font-size: 50px; 
+  }
+  
+  .happy, .toyou {
+    position: relative;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px; 
+  }
+
+  .happy, .bday{
+    font-family: 'Caveat', cursive;
+  }
+  
+  .happy {
+    top:198px;
+  }
+  
+  .toyou {
+    top:123px;
+    font-family: 'Carattere', cursive;
+    padding-top: 7px;
+  }
+  
+  .bday {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    top:163px;
+  }
+
+  
+  .wrap-deco {
+    position: absolute;
+    top:-230px;
+    left:-200px;
+  }
+  
+  .wrap-decoTwo {
+    transform: scaleX(-1);
+    position: absolute;
+    top:-230px;
+    left:445px; 
+  }
+  
+  /*Estilo da parte de dentro do cartão*/
+  .cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height:350px;
+    z-index:-1;
+    left:0;
+    top:0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+  }
+  
+  .inside-text {
+    color: rgb(215, 38, 150);
+    position: relative;
+    top:-160px;
+    transform: scale(0.7);
+  }
+  
+  .wishes {
+    position: relative;
+    top:-100px;
+    margin: 25px;
+  }
+  
+  p {
+    font-family: 'Brush Script MT';
+    color: #b09905;
+  }
+  
+  .name {
+    margin-left:150px;
+  }
